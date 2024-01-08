@@ -1,1 +1,38 @@
+<resources>
 
+    <string name="app_name">FreeSearchableMusicPlayer</string>
+
+    <string name="minutes_unit_label">分</string>
+    <string name="seconds_and_milli_seconds_separator">.</string>
+    <string name="seconds_unit_label">秒</string>
+
+    <string name="main_inclusion_pattern_label">検索条件の文字パターン「正規表現」</string>
+    <string name="main_inclusion_pattern_init"></string>
+    <string name="main_exclusion_pattern_label">除外条件の文字パターン「正規表現」</string>
+    <string name="main_exclusion_pattern_init"></string>
+    <string name="main_search">検索</string>
+
+    <string name="music_list_close">閉じる</string>
+
+    <string name="music_detail_close">閉じる</string>
+    <string name="music_detail_start">再生</string>
+    <string name="music_detail_pause">一時停止</string>
+    <string name="music_detail_stop">停止</string>
+    <string name="music_detail_previous">前の曲へ</string>
+    <string name="music_detail_next">次の曲へ</string>
+    <string name="music_detail_loop">1曲だけループ モード</string>
+    <string name="music_detail_random">ランダム モード</string>
+
+    <string name="no_music_file_list">条件に該当する音楽ファイルが見つかりませんでした。</string>
+    <string name="ok">わかりました</string>
+    <string name="denied_read_media_audio">当アプリ以外による音楽を含む音声メディア ファイルを読み取る権限の許可が無いので、当アプリは音楽ファイルを表示して再生できません。当アプリを終了してください。</string>
+    <string name="denied_read_external_storage">音楽ファイルを含む当アプリ以外によるファイルを読み取る権限の許可が無いので、当アプリは音楽ファイルを表示して再生できません。当アプリを終了してください。</string>
+
+    <string name="main_inclusion_pattern_wrong">検索条件が「正規表現」として間違っています。</string>
+    <string name="main_exclusion_pattern_wrong">除外条件が「正規表現」として間違っています。</string>
+
+    <string name="notification_content_title">通知の見出し</string>
+    <string name="notification_content_text">通知文</string>
+    <string name="notification_ticker">通知ティッカー</string>
+
+</resources>
