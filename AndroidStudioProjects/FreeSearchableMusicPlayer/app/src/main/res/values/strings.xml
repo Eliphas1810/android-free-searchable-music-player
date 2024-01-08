@@ -1,1 +1,38 @@
+<resources>
 
+    <string name="app_name">FreeSearchableMusicPlayer</string>
+
+    <string name="minutes_unit_label">minutes</string>
+    <string name="seconds_and_milli_seconds_separator">.</string>
+    <string name="seconds_unit_label">seconds</string>
+
+    <string name="main_inclusion_pattern_label">Inclusion Pattern "Regular Expression"</string>
+    <string name="main_inclusion_pattern_init"></string>
+    <string name="main_exclusion_pattern_label">Exclusion Pattern "Regular Expression"</string>
+    <string name="main_exclusion_pattern_init"></string>
+    <string name="main_search">Search</string>
+
+    <string name="music_list_close">Close</string>
+
+    <string name="music_detail_close">Close</string>
+    <string name="music_detail_start">Play</string>
+    <string name="music_detail_pause">Pause</string>
+    <string name="music_detail_stop">Stop</string>
+    <string name="music_detail_previous">Previous</string>
+    <string name="music_detail_next">Next</string>
+    <string name="music_detail_loop">Single Loop Mode</string>
+    <string name="music_detail_random">Random Mode</string>
+
+    <string name="no_music_file_list">Applicable music files are not found.</string>
+    <string name="ok">OK</string>
+    <string name="denied_read_media_audio">Now this application does not have the permission to read audio media files( including music files) by others applications. So this applicatiopn can not read music files and show music files. Please finish this application.</string>
+    <string name="denied_read_external_storage">Now this application does not have the permission to read files( including music files) by others applications. So this applicatiopn can not read music files and show music files. Please finish this application.</string>
+
+    <string name="main_inclusion_pattern_wrong">The inclusion is wrong as "regular expression".</string>
+    <string name="main_exclusion_pattern_wrong">The exclusion is wrong as "regular expression".</string>
+
+    <string name="notification_content_title">Notification title</string>
+    <string name="notification_content_text">Notification text</string>
+    <string name="notification_ticker">Notification ticker</string>
+
+</resources>
