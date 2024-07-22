@@ -141,6 +141,9 @@ class MusicList : AppCompatActivity() {
 
 
     //全角の英大文字、半角の英大文字、全角の英小文字を半角の英小文字に置換
+    //
+    //全角数字を半角数字に置換
+    //
     private fun halfWidthLowerCase(string : String) : String {
 
         if (string == null) {
@@ -200,6 +203,16 @@ class MusicList : AppCompatActivity() {
             .replace("Ｘ", "X")
             .replace("Ｙ", "Y")
             .replace("Ｚ", "Z")
+            .replace("０", "0")
+            .replace("１", "1")
+            .replace("２", "2")
+            .replace("３", "3")
+            .replace("４", "4")
+            .replace("５", "5")
+            .replace("６", "6")
+            .replace("７", "7")
+            .replace("８", "8")
+            .replace("９", "9")
             .lowercase()
     }
 
@@ -235,7 +248,11 @@ class MusicList : AppCompatActivity() {
             //前の画面から、検索条件の文字パターン「正規表現」を取得
             var inclusionPattern = getIntent()?.getStringExtra(INCLUSION_PATTERN_KEY) ?: ""
 
-            inclusionPattern = halfWidthLowerCase(inclusionPattern) //全角の英大文字、半角の英大文字、全角の英小文字を半角の英小文字に置換
+            //全角の英大文字、半角の英大文字、全角の英小文字を半角の英小文字に置換
+            //
+            //全角数字を半角数字に置換
+            //
+            inclusionPattern = halfWidthLowerCase(inclusionPattern)
 
             var inclusionRegex : Regex? = null
             if (inclusionPattern != "") {
@@ -246,7 +263,12 @@ class MusicList : AppCompatActivity() {
             //前の画面から、除外条件の文字パターン「正規表現」を取得
             var exclusionPattern = getIntent()?.getStringExtra(EXCLUSION_PATTERN_KEY) ?: ""
 
-            exclusionPattern = halfWidthLowerCase(exclusionPattern) //全角の英大文字、半角の英大文字、全角の英小文字を半角の英小文字に置換
+
+            //全角の英大文字、半角の英大文字、全角の英小文字を半角の英小文字に置換
+            //
+            //全角数字を半角数字に置換
+            //
+            exclusionPattern = halfWidthLowerCase(exclusionPattern)
 
             var exclusionRegex : Regex? = null
             if (exclusionPattern != "") {
@@ -296,7 +318,11 @@ class MusicList : AppCompatActivity() {
 
                     var musicInfoTsv = title + "\t" + artist + "\t" + album + "\t" + filePath
 
-                    musicInfoTsv = halfWidthLowerCase(musicInfoTsv) //全角の英大文字、半角の英大文字、全角の英小文字を半角の英小文字に置換
+                    //全角の英大文字、半角の英大文字、全角の英小文字を半角の英小文字に置換
+                    //
+                    //全角数字を半角数字に置換
+                    //
+                    musicInfoTsv = halfWidthLowerCase(musicInfoTsv)
 
                     //検索条件が未指定の場合か、検索条件が含まれている場合
                     if (inclusionRegex == null || inclusionRegex.containsMatchIn(musicInfoTsv)) {
