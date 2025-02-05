@@ -3,6 +3,7 @@ package eliphas1810.freesearchablemusicplayer
 
 import android.app.*
 import android.content.*
+import android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK
 import android.media.AudioAttributes
 import android.media.AudioManager
 import android.media.MediaPlayer
@@ -574,8 +575,8 @@ class MusicPlayerService : MediaBrowserServiceCompat(), MediaPlayer.OnCompletion
             super.onCreate()
 
 
-            //アンドロイド8(オレオ)以上の場合
-            if (Build.VERSION_CODES.O <= Build.VERSION.SDK_INT) {
+            //アンドロイド9以上の場合
+            if (Build.VERSION_CODES.Q <= Build.VERSION.SDK_INT) {
 
                 val notificationManager = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
@@ -595,7 +596,7 @@ class MusicPlayerService : MediaBrowserServiceCompat(), MediaPlayer.OnCompletion
                 //
                 //startForeground()には、通知(Notification)が必要です。
                 //
-                startForeground(1, notification)
+                startForeground(1, notification, FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK)
             }
 
             mediaPlayer = MediaPlayer()
