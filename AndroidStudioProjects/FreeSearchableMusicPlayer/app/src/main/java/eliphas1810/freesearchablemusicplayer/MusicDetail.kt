@@ -232,7 +232,11 @@ class MusicDetail : AppCompatActivity() {
             }
 
 
-            registerReceiver(musicInfoUpdateBroadcastReceiver, IntentFilter(UPDATE_MUSIC_INFO_KEY))
+            if (Build.VERSION_CODES.TIRAMISU <= Build.VERSION.SDK_INT) {
+                registerReceiver(musicInfoUpdateBroadcastReceiver, IntentFilter(UPDATE_MUSIC_INFO_KEY), RECEIVER_EXPORTED)
+            } else {
+                registerReceiver(musicInfoUpdateBroadcastReceiver, IntentFilter(UPDATE_MUSIC_INFO_KEY))
+            }
 
 
             //サービスからの、音楽ファイルの詳細画面に表示する現在の再生時間の更新を促す通知を受け取ります。
@@ -277,7 +281,11 @@ class MusicDetail : AppCompatActivity() {
             }
 
 
-            registerReceiver(musicCurrentDurationUpdateBroadcastReceiver, IntentFilter(UPDATE_MUSIC_CURRENT_DURATION_KEY))
+            if (Build.VERSION_CODES.TIRAMISU <= Build.VERSION.SDK_INT) {
+                registerReceiver(musicCurrentDurationUpdateBroadcastReceiver, IntentFilter(UPDATE_MUSIC_CURRENT_DURATION_KEY), RECEIVER_EXPORTED)
+            } else {
+                registerReceiver(musicCurrentDurationUpdateBroadcastReceiver, IntentFilter(UPDATE_MUSIC_CURRENT_DURATION_KEY))
+            }
 
 
             //前の画面から音楽ファイルの一覧を取得
